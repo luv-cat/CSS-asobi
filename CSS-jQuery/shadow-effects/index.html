@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Shadow Effects</title>
+  </head>
+  <body>
+    <section>
+      <div class="light"></div>
+      <h2>Power Of Light</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <img src="fire.jpg">
+    </section>
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+      $(document).mousemove(function(e){
+        var X = e.pageX;
+        var Y = e.pageY;
+        $('.light').css('background','radial-gradient(circle at ' +X+ 'px ' +Y+ 'px, transparent, #000 30% )');
+      })
+    </script>
+  </body>
+</html>
