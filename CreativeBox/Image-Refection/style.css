@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+.container {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+}
+.container img {
+  max-width: 350px;
+  transform-origin: center;
+  transform: perspective(800px) rotateY(20deg);
+  transition: 0.5s;
+  /* 下記の記述で画像の下に反転した画像を残している */
+  /* 1px以降の記述で反転画像の制御 */
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+}
+.container:hover img {
+  /* 透明度 */
+  opacity: 0.1;
+}
+
+.container img:hover {
+  transform: perspective(800px) rotateY(0deg);
+  /* 指定された画像のみ透明度を1にする */
+  opacity: 1;
+}
